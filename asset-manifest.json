@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.5febf6ab.css",
-    "main.js": "/my-portfolio/static/js/main.e091aa72.js",
+    "main.css": "/my-portfolio/static/css/main.5ee4f958.css",
+    "main.js": "/my-portfolio/static/js/main.696280a1.js",
     "static/media/yskk.png": "/my-portfolio/static/media/yskk.886c61e65f1d32a46ca8.png",
+    "static/media/tripwe.png": "/my-portfolio/static/media/tripwe.0dea8dacbe33e22bdf65.png",
+    "static/media/snsclo-e-commerce.png": "/my-portfolio/static/media/snsclo-e-commerce.ca692cd5adf4f27d4e95.png",
     "static/media/cv.png": "/my-portfolio/static/media/cv.7a0cf6f1afb59171539b.png",
     "static/media/akwayan.png": "/my-portfolio/static/media/akwayan.a1ab122f552be17de713.png",
     "static/media/syaiful.png": "/my-portfolio/static/media/syaiful.e611a19d2e4ea1e0bda6.png",
     "static/media/company-profile.png": "/my-portfolio/static/media/company-profile.2e39091e5b40715168ee.png",
     "static/media/snsclo.png": "/my-portfolio/static/media/snsclo.a54213afd7fba6807794.png",
+    "static/media/sola-gracia.png": "/my-portfolio/static/media/sola-gracia.844e4e7cbd904cc73a55.png",
     "index.html": "/my-portfolio/index.html",
-    "main.5febf6ab.css.map": "/my-portfolio/static/css/main.5febf6ab.css.map",
-    "main.e091aa72.js.map": "/my-portfolio/static/js/main.e091aa72.js.map"
+    "main.5ee4f958.css.map": "/my-portfolio/static/css/main.5ee4f958.css.map",
+    "main.696280a1.js.map": "/my-portfolio/static/js/main.696280a1.js.map"
   },
   "entrypoints": [
-    "static/css/main.5febf6ab.css",
-    "static/js/main.e091aa72.js"
+    "static/css/main.5ee4f958.css",
+    "static/js/main.696280a1.js"
   ]
 }
