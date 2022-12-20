@@ -5,7 +5,7 @@ function Skills() {
         <div className="w-full px-4 pb-16">
           <div className="max-w-xl mx-auto text-center mb-8">
             <h2 className="font-semibold text-4xl text-white mb-2">Skills</h2>
-            <h4 className="font-medium text-md text-white">Here are some programming languages that I have learned.</h4>
+            <h4 className="font-medium text-md text-white">Here are some programming skills that I have learned.</h4>
           </div>
           <div className="flex flex-wrap items-center justify-center w-full">
             <div className="w-full flex items-center text-white py-3 px-4 lg:px-12 lg:w-1/2">
