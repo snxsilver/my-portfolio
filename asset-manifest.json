@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.5ee4f958.css",
-    "main.js": "/my-portfolio/static/js/main.696280a1.js",
+    "main.css": "/my-portfolio/static/css/main.fca3b1b5.css",
+    "main.js": "/my-portfolio/static/js/main.fc2d2b68.js",
     "static/media/yskk.png": "/my-portfolio/static/media/yskk.886c61e65f1d32a46ca8.png",
     "static/media/tripwe.png": "/my-portfolio/static/media/tripwe.0dea8dacbe33e22bdf65.png",
     "static/media/snsclo-e-commerce.png": "/my-portfolio/static/media/snsclo-e-commerce.ca692cd5adf4f27d4e95.png",
@@ -12,11 +12,11 @@
     "static/media/snsclo.png": "/my-portfolio/static/media/snsclo.a54213afd7fba6807794.png",
     "static/media/sola-gracia.png": "/my-portfolio/static/media/sola-gracia.844e4e7cbd904cc73a55.png",
     "index.html": "/my-portfolio/index.html",
-    "main.5ee4f958.css.map": "/my-portfolio/static/css/main.5ee4f958.css.map",
-    "main.696280a1.js.map": "/my-portfolio/static/js/main.696280a1.js.map"
+    "main.fca3b1b5.css.map": "/my-portfolio/static/css/main.fca3b1b5.css.map",
+    "main.fc2d2b68.js.map": "/my-portfolio/static/js/main.fc2d2b68.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ee4f958.css",
-    "static/js/main.696280a1.js"
+    "static/css/main.fca3b1b5.css",
+    "static/js/main.fc2d2b68.js"
   ]
 }
