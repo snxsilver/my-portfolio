@@ -30,19 +30,19 @@ function Navbar() {
             <nav id="nav-menu" className={"absolute py-3 bg-white shadow-lg rounded-md max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none "+ (navbarOpen ? "" : "hidden")}>
               <ul className="block lg:flex">
                 <li className="group">
-                  <a href="" onClick={(e) => {e.preventDefault(); window.location.replace('/#home');}} className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Home</a>
+                  <a href="" onClick={(e) => {e.preventDefault(); window.location.replace('/my-portfolio/#home');}} className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Home</a>
                 </li>
                 <li className="group">
-                  <a href="" onClick={(e) => {e.preventDefault(); window.location.replace('/#about');}} className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">About</a>
+                  <a href="" onClick={(e) => {e.preventDefault(); window.location.replace('/my-portfolio/#about');}} className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">About</a>
                 </li>
                 <li className="group">
-                  <a href="" onClick={(e) => {e.preventDefault(); window.location.replace('/#experience');}} className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Experience</a>
+                  <a href="" onClick={(e) => {e.preventDefault(); window.location.replace('/my-portfolio/#experience');}} className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Experience</a>
                 </li>
                 <li className="group">
-                  <a href="" onClick={(e) => {e.preventDefault(); window.location.replace('/#skills');}} className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Skills</a>
+                  <a href="" onClick={(e) => {e.preventDefault(); window.location.replace('/my-portfolio/#skills');}} className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Skills</a>
                 </li>
                 <li className="group">
-                  <a href="" onClick={(e) => {e.preventDefault(); window.location.replace('/#portfolio');}} className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Portfolio</a>
+                  <a href="" onClick={(e) => {e.preventDefault(); window.location.replace('/my-portfolio/#portfolio');}} className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Portfolio</a>
                 </li>
               </ul>
             </nav>
