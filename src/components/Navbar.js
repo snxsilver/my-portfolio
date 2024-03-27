@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react"
+import { useState, useEffect } from "react"
 
 function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -15,7 +15,7 @@ function Navbar() {
   });
 
   return (
-    <header className={"bg-transparent absolute top-0 left-0 w-full flex items-center z-10 " + (offset ? "navbar-fixed" : "")}>
+    <header className={"bg-transparent absolute top-0 left-0 right-0 w-screen flex items-center z-10 print:hidden " + (offset ? "navbar-fixed" : "")}>
       <div className="container">
         <div className="flex items-center justify-between relative">
           <div className="px-4">
@@ -27,22 +27,27 @@ function Navbar() {
               <span className="hamburger-line transition duration-300 ease-in-out"></span>
               <span className="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
             </button>
-            <nav id="nav-menu" className={"absolute py-3 bg-white shadow-lg rounded-md max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none "+ (navbarOpen ? "" : "hidden")}>
+            <nav id="nav-menu" className={"absolute py-3 bg-white shadow-lg rounded-md max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none " + (navbarOpen ? "" : "hidden")}>
               <ul className="block lg:flex">
                 <li className="group">
-                  <a href="" onClick={(e) => {e.preventDefault(); window.location.replace('/my-portfolio/#home');}} className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Home</a>
+                  <a href="#home"
+                    className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Home</a>
                 </li>
                 <li className="group">
-                  <a href="" onClick={(e) => {e.preventDefault(); window.location.replace('/my-portfolio/#about');}} className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">About</a>
+                  <a href="#experience"
+                    className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Experience</a>
                 </li>
                 <li className="group">
-                  <a href="" onClick={(e) => {e.preventDefault(); window.location.replace('/my-portfolio/#experience');}} className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Experience</a>
+                  <a href="#about"
+                    className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">About</a>
                 </li>
                 <li className="group">
-                  <a href="" onClick={(e) => {e.preventDefault(); window.location.replace('/my-portfolio/#skills');}} className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Skills</a>
+                  <a href="#skills"
+                    className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Skills</a>
                 </li>
                 <li className="group">
-                  <a href="" onClick={(e) => {e.preventDefault(); window.location.replace('/my-portfolio/#portfolio');}} className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Portfolio</a>
+                  <a href="#portfolio"
+                    className="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Portfolio</a>
                 </li>
               </ul>
             </nav>

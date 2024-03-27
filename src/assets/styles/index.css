@@ -10,8 +10,16 @@ html {
   scroll-behavior: smooth
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.color-white {
+  color: white
+}
+
 .navbar-fixed {
-  @apply fixed z-[999] bg-opacity-80 bg-white;
+  @apply fixed z-[20] bg-opacity-80 bg-white inset-x-0;
   backdrop-filter: blur(5px);
 }
 
@@ -29,4 +37,20 @@ html {
 
 .hamburger-active > span:nth-child(2) {
   @apply scale-0;
+}
+
+@media print {
+  @page {
+    size: A4;
+    /* DIN A4 standard, Europe */
+    margin: 0;
+    size: auto;
+  }
+
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact;
+  }
 }
