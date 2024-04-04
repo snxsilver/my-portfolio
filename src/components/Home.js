@@ -76,9 +76,9 @@ const BuildButton = ({ printCv, printPorto, onAllPrint }) => {
   }
 
   const downloadList = [
-    {id: 1, href: "/file/Resume-Muh_Syaiful_Adli.pdf", text: "Resume"},
-    {id: 2, href: "/file/Portfolio-Muh_Syaiful_Adli.pdf", text: "Portfolio"},
-    {id: 3, href: "/file/Resume-and-Portfolio-Muh_Syaiful_Adli.pdf", text: "Resume + Portfolio"},
+    {id: 1, href: "file/Resume-Muh_Syaiful_Adli.pdf", text: "Resume"},
+    {id: 2, href: "file/Portfolio-Muh_Syaiful_Adli.pdf", text: "Portfolio"},
+    {id: 3, href: "file/Resume-and-Portfolio-Muh_Syaiful_Adli.pdf", text: "Resume + Portfolio"},
   ]
 
   const printList = [
