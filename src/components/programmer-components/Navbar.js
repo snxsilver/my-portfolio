@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react"
+import useIsTop from "../utility/useIsTop";
 
 function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -46,8 +47,10 @@ function Navbar() {
     { title: "Portfolio", href: "#portfolio" },
   ]
 
+  const isTop = useIsTop();
+
   return (
-    <header className={"bg-transparent absolute top-0 left-0 right-0 w-screen flex items-center z-10 print:hidden " + (offset ? "navbar-fixed" : "")}>
+    <header className={"bg-transparent absolute top-0 left-0 right-0 w-screen flex items-center z-10 print:hidden " + (offset ? "navbar-fixed" : "") + (isTop ? " hidden" : "")}>
       <div className="container">
         <div className="flex items-center justify-between relative">
           <div className="px-4">

@@ -19,10 +19,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#0891b2',
-        'darker-primary': '#0e7490',
-        dark: '#0f172a',
-        secondary: '#64748b',
+        primary: '#0e7490',
+        'darker-primary': '#155e75',
+        dark: '#1e293b',
+        secondary: '#334155',
+        'bg-dark': "#164e63",
+        'bg-slate': "#ecfeff",
+        'bg-darker': "#083344"
       },
       // screens: {
       //   '2xl': '1320px',

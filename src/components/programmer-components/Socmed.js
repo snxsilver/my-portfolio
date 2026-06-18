@@ -1,4 +1,4 @@
-import { DiscordIcon, FacebookIcon, GithubIcon, InstagramIcon, LinkedInIcon } from "./icons"
+import { DiscordIcon, FacebookIcon, GithubIcon, InstagramIcon, LinkedInIcon } from "../icons"
 
 const SocmedTile = ({ url, icon: Icon, title }) => {
   url = url || '#'

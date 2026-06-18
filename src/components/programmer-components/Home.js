@@ -1,29 +1,35 @@
 import { useState, useRef, useEffect } from 'react'
-import me from '../assets/img/syaiful.png'
-import { DownloadIcon, PrintIcon } from './icons'
-import Socmed from "./Socmed"
+import me from '../../assets/img/syaiful.png'
+import { DownloadIcon, PrintIcon } from '../icons'
+import Socmed from './Socmed'
+import useIsTop from '../utility/useIsTop'
 
 const Title = ({ name, title, intro, printCv, printPorto, onAllPrint }) => {
+  const isTop = useIsTop();
+
   return (
     <div className="w-full">
-      <div className="w-full flex flex-col print:flex-row">
+      <div className={"w-full flex lg:flex-col sm:flex-row flex-col print:flex-row" + (isTop ? " sm:h-fit print:h-fit print:justify-start print:mt-0 h-screen justify-center sm:justify-start -mt-8 sm:mt-0" : "")}>
+        <div className="print:hidden w-full sm:hidden self-center -mt-20 mb-6 justify-center">
+          <Portrait print={true} />
+        </div>
         <div className="w-full print:w-1/2 print:pb-3">
-          <h1 className="text-base font-semibold text-primary md:text-xl">Hello! I am<span
-            className="block font-bold text-dark text-4xl mt-1 lg:text-5xl">{name}</span></h1>
-          <h2 className="font-medium text-secondary text-lg mb-8 mt-2 lg:text-2xl print:mb-2">{title}</h2>
-          <div className="block print:hidden">
+          <h1 className={"text-base font-semibold text-primary md:text-xl sm:text-start print:text-start text-center"}>Hello! I am<span
+            className={"block font-bold text-dark text-4xl mt-1 lg:text-5xl sm:text-start print:text-start text-center"}>{name}</span></h1>
+          <h2 className={"font-medium text-secondary text-lg mb-8 mt-2 lg:text-2xl print:mb-2 sm:text-start print:text-start text-center"}>{title}</h2>
+          <div className={"flex print:hidden sm:justify-start print:justify-start justify-center"}>
             <BuildButton printCv={printCv} printPorto={printPorto} onAllPrint={onAllPrint} />
           </div>
           <div className="hidden print:block -mb-1">
             <Socmed />
           </div>
         </div>
-        <div className="print:w-1/2 print:flex hidden self-end -mt-24 items-end justify-center">
+        <div className="print:w-1/2 print:flex hidden sm:flex sm:w-1/2 lg:hidden self-end -mt-24 items-end justify-center">
           <Portrait print={true} />
         </div>
       </div>
       <h2 className="font-bold text-xl text-primary uppercase mb-3 mt-12 print:mt-0 print:mb-1 print:text-lg">About Me</h2>
-      <p className="font-medium text-secondary">
+      <p className="font-medium text-secondary sm:text-left text-justify">
         {intro}
       </p>
       <div className="print:hidden block">
@@ -131,22 +137,29 @@ const Portrait = ({ print }) => {
   )
 }
 
+const NameText = "M Syaiful Adli"
+const TitleText = "Web / Mobile Developer"
+// const IntroText = "I am a hard worker and a persistent learner. 5 years experience in Website and Mobile Development at PT DSAA Group, PT Tripedia Global Adventura and Yayasan Satu Karsa Karya. Always want to develop and learn the latest programming languages. Have good communication, analysis and problem solving skills."
+const IntroText = "Software Engineer with 5+ years of experience in front-end, back-end, and mobile application development. Experienced in designing, developing, and maintaining business applications, marketplace platforms, and travel systems, as well as implementing workflow automation using n8n. Skilled in system integration, API development, payment gateway integration, and VPS management. Strong analytical, problem-solving, and communication skills with experience leading development teams and delivering reliable software solutions."
+
 function Home({ printCv, printPorto, onAllPrint }) {
+  const isTop = useIsTop();
+
   return (
-    <section id="home" className="pt-24 lg:pt-32 lg:mb-12 print:pt-6">
+    <section id="home" className={"pt-24 lg:mb-12 print:pt-6" + (isTop ? " sm:h-screen print:h-fit h-fit print:items-start items-start lg:pt-0 pt-0 sm:flex sm:items-center" : " lg:pt-32")}>
       <div className="container">
         <div className="flex flex-wrap">
           <div className="w-full self-end px-4 lg:w-1/2 print:px-2">
             <Title
-              name="Muh Syaiful Adli"
-              title="Web / Mobile Developer"
-              intro="I am a hard worker and a persistent learner. 5 years experience in Website and Mobile Development at PT DSAA Group, PT Tripedia Global Adventura and Yayasan Satu Karsa Karya. Always want to develop and learn the latest programming languages. Have good communication, analysis and problem solving skills."
+              name={NameText}
+              title={TitleText}
+              intro={IntroText}
               printCv={printCv}
               printPorto={printPorto}
               onAllPrint={onAllPrint}
             />
           </div>
-          <div className="w-full self-start px-4 lg:w-1/2 print:hidden print:px-2">
+          <div className="w-full self-start px-4 lg:block hidden lg:w-1/2 print:hidden print:px-2">
             <Portrait />
           </div>
         </div>

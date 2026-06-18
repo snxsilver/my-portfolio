@@ -1,8 +1,8 @@
-import { AddressIcon, CalendarIcon, EmailIcon, PhoneIcon } from "./icons"
+import { AddressIcon, CalendarIcon, EmailIcon, PhoneIcon } from "../icons"
 
 const ListTile = ({ year, text }) => {
   return (
-    <li className="flex font-medium text-secondary text-base">
+    <li className="flex font-medium text-secondary text-base sm:text-left text-justify">
       <span className="font-semibold whitespace-nowrap mr-3 flex justify-center items-center">
         {year}
       </span>
@@ -13,7 +13,7 @@ const ListTile = ({ year, text }) => {
 
 const ContactTile = ({ icon: Icon, text }) => {
   return (
-    <li className="flex items-center font-medium text-secondary text-base">
+    <li className="flex items-center font-medium text-secondary text-base sm:text-left text-justify">
       <span className="mr-3 rounded-full flex justify-center items-center print:w-[15px]">
         <Icon />
       </span>
@@ -45,22 +45,22 @@ const ContactList = [
   },
   {
     icon: AddressIcon,
-    text: "Kabupaten Sukoharjo, Provinsi Jawa Tengah, 57552"
+    text: "Sukoharjo, Central Java 57552, Indonesia"
   },
-  {
-    icon: CalendarIcon,
-    text: "Age: 28"
-  },
+  // {
+  //   icon: CalendarIcon,
+  //   text: "Age: 28"
+  // },
 ]
 
 const FormalList = [
   {
     year: "2018",
-    text: "Ilmu dan Teknologi Pangan Universitas Sebelas Maret Surakarta, GPA = 3.50"
+    text: "Bachelor's Degree in Food Science and Technology, Sebelas Maret University, GPA: 3.50/4.00"
   },
   {
     year: "2013",
-    text: "SMA Negeri 4 Surakarta"
+    text: "Senior High School, SMA Negeri 4 Surakarta"
   }
 ]
 
@@ -146,7 +146,7 @@ const PersonalInformation = () => {
 
 function About() {
   return (
-    <section id="about" className="pt-12 pb-16 bg-slate-100 print:pt-2 print:pb-2">
+    <section id="about" className="pt-12 pb-16 bg-bg-slate print:pt-3 print:pb-6 print:bg-white">
       <div className="container">
         <div className="flex flex-wrap">
           <div className="w-full px-4 lg:px-12 lg:w-1/2 print:w-1/2 space-y-5 print:space-y-2 print:px-2">

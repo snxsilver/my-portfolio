@@ -1,4 +1,4 @@
-import { CrossIcon } from "./icons"
+import { CrossIcon } from "../icons"
 
 function ImagePreview({ img, imagePreview, setImagePreview }) {
   var mobile = false
