@@ -1,28 +1,27 @@
 import me from '../../assets/img/syaiful-sq.png'
 import { useState, useEffect } from "react";
-import useIsTop from '../utility/useIsTop'
 
 const Portrait = ({ print }) => {
   print = print || false
   return (
-    <div className={`w-[100px] md:w-[300px] rounded-full flex items-center justify-center bg-slate-300`}>
-      <img src={me} alt="Syaiful Adli" className={`w-[100px] md:w-[300px] rounded-full`} />
+    <div className={`w-[100px] rounded-full flex items-center justify-center bg-slate-300`}>
+      <img src={me} alt="Syaiful Adli" className={`w-[100px] rounded-full`} />
     </div>
   )
 }
 
 const Title = ({ name, title, intro }) => {
   return (
-    <div className="w-full flex flex-col pl-3 md:pl-7">
+    <div className="w-full flex flex-col pl-3">
       <div className="w-full flex flex-col">
         <div className="w-full">
           <span
-            className="block font-bold text-black mt-1 text-xl md:text-5xl md:mb-12 print:mb-5 print:text-3xl">{name}</span>
+            className="block font-bold text-black mt-1 text-2xl mb-5">{name}</span>
           {/* <h2 className="font-medium text-black mb-8 mt-2 text-2xl">{title}</h2> */}
         </div>
       </div>
       <div className="w-full">
-        <p className="font-medium text-black md:text-base text-sm print:text-base">
+        <p className="font-medium text-black text-base">
           {intro}
         </p>
       </div>
@@ -32,10 +31,8 @@ const Title = ({ name, title, intro }) => {
 
 
 function GeneralHome() {
-  const isTop = useIsTop()
-
   return (
-    <section id="home" className={`pt-6 md:pt-32 print:pt-4 print:hidden ${isTop ? 'md:h-screen' : ''}`}>
+    <section id="home" className={`pt-2 hidden print:block h-fit w-full`}>
       <div className="container container2">
         <div className="flex items-center">
           <div className="justify-start items-center flex">
@@ -46,13 +43,10 @@ function GeneralHome() {
               name="Muh Syaiful Adli"
               // title="Nutrition Enthusiast"
               intro="HP: 085325255626 | syaiful.adly2@gmail.com | Sukoharjo, Jawa Tengah"
-            // printCv={printCv}
-            // printPorto={printPorto}
-            // onAllPrint={onAllPrint}
             />
           </div>
         </div>
-        <div className="md:mt-12 mt-3 text-justify text-sm md:text-base print:text-base">
+        <div className="md:mt-12 mt-3 text-justify text-sm md:text-base print:text-sm">
         Praktisi gizi yang tertarik dan teliti dalam menghitung serta menganalisis kebutuhan nutrisi harian. Memiliki latar belakang pendidikan yang relevan, dengan pemahaman mendalam tentang prinsip gizi seimbang dan kesehatan. Aktif menerapkan pengetahuan gizi dalam kehidupan sehari-hari, merencanakan pola makan sehat, dan mempelajari strategi nutrisi yang efektif. Termotivasi untuk mengembangkan keterampilan profesional dan memberikan kontribusi positif dalam mendukung kesehatan individu.
         </div>
       </div>

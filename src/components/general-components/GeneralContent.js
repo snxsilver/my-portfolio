@@ -114,7 +114,7 @@ const SectionTile = ({ title, content }) => {
   return (
     <div className="mt-5 md:mt-8 print:mt-1">
       <div className="text-base print:text-base md:text-lg font-bold">{title}</div>
-      <div className="w-full h-1 bg-black"></div>
+      <div className="w-full h-1 print:h-0.5 bg-black"></div>
       {content}
     </div>
   )

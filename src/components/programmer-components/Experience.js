@@ -26,14 +26,17 @@ const ExperienceTile = ({ job, company, date, description, hidden = false }) => 
 
 const experienceList = [
   {
+    // job: "Software Engineer",
     job: "Senior Software Engineer",
     company: "PT. Ihram Fajar Travelindo",
     date: "May 2023 - Present",
     description: [
       "Led a team of developers in designing and developing a marketplace web application using Laravel 11.",
+      // "Handled the end-to-end design and development of a marketplace web application using Laravel 11.",
       "Managed VPS infrastructure, including server configuration, application deployment, monitoring, and maintenance.",
       "Coordinated development activities and provided technical guidance to team members.",
       "Collaborated with stakeholders to define product requirements and translate business needs into technical solutions.",
+      // "Collaborated with stakeholders to define requirements and deliver technical solutions."
     ]
   },
   {
