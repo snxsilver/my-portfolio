@@ -1,4 +1,4 @@
-import { AddressIcon, CalendarIcon, EmailIcon, PhoneIcon } from "../icons"
+import { ContactList, FormalList, NonFormalList, OrganizationList } from "./copywriting"
 
 const ListTile = ({ year, text }) => {
   return (
@@ -33,62 +33,6 @@ const Wrapper = ({ title, content, personal }) => {
     </div>
   )
 }
-
-const ContactList = [
-  {
-    icon: PhoneIcon,
-    text: "+62853-2525-5626"
-  },
-  {
-    icon: EmailIcon,
-    text: "syaiful.adly2@gmail.com"
-  },
-  {
-    icon: AddressIcon,
-    text: "Sukoharjo, Central Java 57552, Indonesia"
-  },
-  // {
-  //   icon: CalendarIcon,
-  //   text: "Age: 28"
-  // },
-]
-
-const FormalList = [
-  {
-    year: "2018",
-    text: "Bachelor's Degree in Food Science and Technology, Sebelas Maret University, GPA: 3.50/4.00"
-  },
-  {
-    year: "2013",
-    text: "Senior High School, SMA Negeri 4 Surakarta"
-  }
-]
-
-const NonFormalList = [
-  {
-    year: "2022",
-    text: "React Developer Course by Teknoblox"
-  },
-  {
-    year: "2022",
-    text: "UI/UX Design Mastery Course by Skilvul"
-  },
-  {
-    year: "2021",
-    text: "HTML, CSS, JavaScript, PHP and MySQL Course by Progate"
-  },
-]
-
-const OrganizationList = [
-  {
-    year: "2016",
-    text: "Head of Media Informasi Division at Kelompok Studi Ilmiah"
-  },
-  {
-    year: "2015",
-    text: "Head of Kaderisasi Division at Kelompok Studi Ilmiah"
-  },
-]
 
 const FormalEducation = () => {
   return (

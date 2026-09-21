@@ -1,5 +1,6 @@
 import me from '../../assets/img/syaiful-sq.png'
 import { useState, useEffect } from "react";
+import { intro, introText, name } from './generalcopywriting';
 
 const Portrait = ({ print }) => {
   print = print || false
@@ -40,14 +41,14 @@ function GeneralHome() {
           </div>
           <div className="md:w-full flex flex-1">
             <Title
-              name="Muh Syaiful Adli"
+              name={name}
               // title="Nutrition Enthusiast"
-              intro="HP: 085325255626 | syaiful.adly2@gmail.com | Sukoharjo, Jawa Tengah"
+              intro={intro}
             />
           </div>
         </div>
         <div className="md:mt-12 mt-3 text-justify text-sm md:text-base print:text-sm">
-        Praktisi gizi yang tertarik dan teliti dalam menghitung serta menganalisis kebutuhan nutrisi harian. Memiliki latar belakang pendidikan yang relevan, dengan pemahaman mendalam tentang prinsip gizi seimbang dan kesehatan. Aktif menerapkan pengetahuan gizi dalam kehidupan sehari-hari, merencanakan pola makan sehat, dan mempelajari strategi nutrisi yang efektif. Termotivasi untuk mengembangkan keterampilan profesional dan memberikan kontribusi positif dalam mendukung kesehatan individu.
+          {introText}
         </div>
       </div>
     </section>

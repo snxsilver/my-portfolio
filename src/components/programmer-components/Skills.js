@@ -1,19 +1,4 @@
-import {
-  ApolloGraphQlIcon,
-  BootstrapIcon,
-  CodeigniterIcon,
-  FlutterIcon,
-  GraphQlIcon,
-  LaravelIcon,
-  MongoDbIcon,
-  MySqlIcon,
-  NodeJsIcon,
-  PostgreeSqlIcon,
-  ReactJsIcon,
-  TailwindCssIcon,
-  VueJsIcon,
-  N8NIcon
-} from "../icons"
+import { stacks } from "./copywriting"
 
 const SkillTile = ({ icon: Icon, text }) => {
   return (
@@ -36,23 +21,6 @@ const SkillTilePrint = ({ icon: Icon, text }) => {
     </div>
   )
 }
-
-const stacks = [
-  { icon: ReactJsIcon, text: "React Js" },
-  { icon: VueJsIcon, text: "Vue Js" },
-  { icon: TailwindCssIcon, text: "Tailwind CSS" },
-  { icon: BootstrapIcon, text: "Bootstrap" },
-  { icon: FlutterIcon, text: "Flutter" },
-  { icon: CodeigniterIcon, text: "CodeIgniter" },
-  { icon: LaravelIcon, text: "Laravel" },
-  { icon: NodeJsIcon, text: "Node Js" },
-  { icon: GraphQlIcon, text: "GraphQL" },
-  { icon: ApolloGraphQlIcon, text: "Apollo GraphQL" },
-  { icon: MySqlIcon, text: "MySQL" },
-  { icon: PostgreeSqlIcon, text: "PostgreSQL" },
-  { icon: MongoDbIcon, text: "Mongo DB" },
-  { icon: N8NIcon, text: "n8n Cloud" },
-]
 
 function Skills() {
   return (

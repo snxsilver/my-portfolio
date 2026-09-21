@@ -3,6 +3,7 @@ import me from '../../assets/img/syaiful.png'
 import { DownloadIcon, PrintIcon } from '../icons'
 import Socmed from './Socmed'
 import useIsTop from '../utility/useIsTop'
+import { IntroText, NameText, TitleText } from './copywriting'
 
 const Title = ({ name, title, intro, printCv, printPorto, onAllPrint }) => {
   const isTop = useIsTop();
@@ -137,10 +138,10 @@ const Portrait = ({ print }) => {
   )
 }
 
-const NameText = "M Syaiful Adli"
-const TitleText = "Web / Mobile Developer"
-// const IntroText = "I am a hard worker and a persistent learner. 5 years experience in Website and Mobile Development at PT DSAA Group, PT Tripedia Global Adventura and Yayasan Satu Karsa Karya. Always want to develop and learn the latest programming languages. Have good communication, analysis and problem solving skills."
-const IntroText = "Software Engineer with 5+ years of experience in front-end, back-end, and mobile application development. Experienced in designing, developing, and maintaining business applications, marketplace platforms, and travel systems, as well as implementing workflow automation using n8n. Skilled in system integration, API development, payment gateway integration, and VPS management. Strong analytical, problem-solving, and communication skills with experience leading development teams and delivering reliable software solutions."
+// const NameText = "M Syaiful Adli"
+// const TitleText = "Web / Mobile Developer"
+// // const IntroText = "I am a hard worker and a persistent learner. 5 years experience in Website and Mobile Development at PT DSAA Group, PT Tripedia Global Adventura and Yayasan Satu Karsa Karya. Always want to develop and learn the latest programming languages. Have good communication, analysis and problem solving skills."
+// const IntroText = "Software Engineer with 5+ years of experience in front-end, back-end, and mobile application development. Experienced in designing, developing, and maintaining business applications, marketplace platforms, and travel systems, as well as implementing workflow automation using n8n. Skilled in system integration, API development, payment gateway integration, and VPS management. Strong analytical, problem-solving, and communication skills with experience leading development teams and delivering reliable software solutions."
 
 function Home({ printCv, printPorto, onAllPrint }) {
   const isTop = useIsTop();

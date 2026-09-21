@@ -1,3 +1,5 @@
+import { experienceList } from "./copywriting"
+
 const ExperienceTile = ({ job, company, date, description, hidden = false }) => {
   return (
     <div className={"w-full" + (hidden ? " print:hidden" : "")}>
@@ -23,62 +25,6 @@ const ExperienceTile = ({ job, company, date, description, hidden = false }) => 
     </div>
   )
 }
-
-const experienceList = [
-  {
-    // job: "Software Engineer",
-    job: "Senior Software Engineer",
-    company: "PT. Ihram Fajar Travelindo",
-    date: "May 2023 - Present",
-    description: [
-      "Led a team of developers in designing and developing a marketplace web application using Laravel 11.",
-      // "Handled the end-to-end design and development of a marketplace web application using Laravel 11.",
-      "Managed VPS infrastructure, including server configuration, application deployment, monitoring, and maintenance.",
-      "Coordinated development activities and provided technical guidance to team members.",
-      "Collaborated with stakeholders to define product requirements and translate business needs into technical solutions.",
-      // "Collaborated with stakeholders to define requirements and deliver technical solutions."
-    ]
-  },
-  {
-    job: "Freelance Flutter Developer",
-    company: "PT. DSAA Group",
-    date: "January - March 2024",
-    description: [
-      "Collaborated with a team of developers to design and develop a Flutter application using Provider and GraphQL Client.",
-      "Managed application release and updates on Google Play Store, including versioning and deployment.",
-      "Performed testing and debugging to ensure application quality.",
-    ]
-  },
-  {
-    job: "Freelance Web App Developer",
-    company: "CV. Sola Gracia",
-    date: "March - May 2023",
-    description: [
-      "Designed and developed accounting and employee management web applications using Laravel 9.",
-      "Performed debugging, maintenance, and system enhancements to ensure application stability and quality.",
-    ]
-  },
-  {
-    job: "Front-End Developer",
-    company: "PT. Tripedia Global Adventura",
-    date: "February 2022 - March 2023",
-    description: [
-      "Collaborated with a team of developers to develop new features for a web application using Vue.js.",
-      "Designed and developed backend services and APIs using Laravel 8.",
-      "Performed debugging and maintenance to ensure application stability and quality.",
-    ]
-  },
-  {
-    job: "Staff of Data and Information Management Division",
-    company: "Yayasan Satu Karsa Karya",
-    date: "January 2020 - December 2021",
-    description: [
-      "Developed new features for company profile website using Laravel 5.",
-      "Monitored system performance and performed debugging to ensure website stability.",
-    ],
-    // hidden: true,
-  },
-]
 
 function Experience() {
   return (
