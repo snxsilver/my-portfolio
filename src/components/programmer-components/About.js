@@ -1,13 +1,36 @@
-import { ContactList, FormalList, NonFormalList, OrganizationList } from "./copywriting"
+import { ContactList, FormalList, NonFormalList, OrganizationList, SkillList } from "./copywriting"
 
-const ListTile = ({ year, text }) => {
+const ListTile = ({ year, text, skill, contents = [] }) => {
+  skill = skill || false
+
   return (
-    <li className="flex font-medium text-secondary text-base sm:text-left text-justify">
-      <span className="font-semibold whitespace-nowrap mr-3 flex justify-center items-center">
-        {year}
-      </span>
-      {text}
-    </li>
+    <div>
+      <li className="flex font-medium text-secondary text-base sm:text-left text-justify">
+        <span
+          className={
+            "font-semibold whitespace-nowrap mr-3 flex justify-center" +
+            (skill ? " items-start" : " items-center")
+          }
+        >
+          {skill ? year + ":" : year}
+        </span>
+
+        {text}
+      </li>
+
+{contents.length > 0 && (
+  <ul className="list-disc ml-5">
+    {contents.map((item, index) => (
+      <li
+        className="font-medium text-secondary text-base sm:text-left text-justify"
+        key={index}
+      >
+        {item}
+      </li>
+    ))}
+  </ul>
+)}
+    </div>
   )
 }
 
@@ -36,9 +59,9 @@ const Wrapper = ({ title, content, personal }) => {
 
 const FormalEducation = () => {
   return (
-    <Wrapper title="Formal Education"
+    <Wrapper title="Education"
       content={FormalList.map((item, index) => (
-        <ListTile key={index} year={item.year} text={item.text} />
+        <ListTile key={index} year={item.year} text={item.text} contents={item.activity} />
       ))}
     />
   )
@@ -57,15 +80,34 @@ const NonFormalEducation = () => {
   )
 }
 
-const OrganizationExperience = () => {
+// const OrganizationExperience = () => {
+//   return (
+//     <Wrapper
+//       title="Organization Experience"
+//       content={
+//         OrganizationList.map((item, index) => (
+//           <ListTile key={index} year={item.year} text={item.text} />
+//         ))
+//       }
+//     />
+//   )
+// }
+const TechStack = () => {
+  const listToString = (list) => {
+    return list.join(", ")
+  }
+
   return (
     <Wrapper
-      title="Organization Experience"
-      content={
-        OrganizationList.map((item, index) => (
-          <ListTile key={index} year={item.year} text={item.text} />
-        ))
-      }
+      title="Technical Skills"
+      content={SkillList.map((item, index) => (
+        <ListTile
+          key={index}
+          year={item.title}
+          text={listToString(item.skills)}
+          skill={true}
+        />
+      ))}
     />
   )
 }
@@ -90,16 +132,17 @@ const PersonalInformation = () => {
 
 function About() {
   return (
-    <section id="about" className="pt-12 pb-16 bg-bg-slate print:pt-3 print:pb-6 print:bg-white">
+    <section id="about" className="pt-12 pb-16 bg-bg-slate print:pt-0 print:pb-6 print:bg-white">
       <div className="container">
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap items-center">
           <div className="w-full px-4 lg:px-12 lg:w-1/2 print:w-1/2 space-y-5 print:space-y-2 print:px-2">
             <PersonalInformation />
             <FormalEducation />
           </div>
           <div className="w-full px-4 lg:px-12 pt-8 lg:w-1/2 lg:pt-0 print:w-1/2 space-y-5 print:space-y-2 print:pt-0 print:px-2">
             <NonFormalEducation />
-            <OrganizationExperience />
+            {/* <OrganizationExperience /> */}
+            <TechStack />
           </div>
         </div>
       </div>

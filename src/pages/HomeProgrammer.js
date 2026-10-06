@@ -47,7 +47,7 @@ function HomeProgrammer() {
         <Experience />
         <About />
         <div className="print:absolute print:bottom-0 print:w-full">
-          <Skills />
+          {/* <Skills /> */}
           <div className="print:hidden">
             <Portfolio />
           </div>

@@ -2,7 +2,7 @@ import { experienceList } from "./copywriting"
 
 const ExperienceTile = ({ job, company, date, description, hidden = false }) => {
   return (
-    <div className={"w-full" + (hidden ? " print:hidden" : "")}>
+    <div className={"w-full"}>
       <div className="flex flex-wrap lg:space-x-3 mb-3 print:mb-0 print:items-end print:space-x-3">
         <h2 className="font-semibold text-lg text-secondary w-full lg:w-auto print:w-auto">{job}</h2>
         <div className="hidden lg:flex items-center h-7 print:flex">
@@ -12,7 +12,7 @@ const ExperienceTile = ({ job, company, date, description, hidden = false }) => 
         <h2 className="font-medium lg:text-lg text-secondary mr-2 lg:mr-0">{company}</h2>
         <h2 className="font-medium lg:text-lg text-secondary">({date})</h2>
       </div>
-      <ul>
+      <ul className={(hidden ? " print:hidden" : "")}>
         {description.map((item, index) => (
           <li key={index} className="text-secondary flex items-start print:p-0 print:m-0 sm:text-left text-justify">
             <div className="flex items-center h-6">
